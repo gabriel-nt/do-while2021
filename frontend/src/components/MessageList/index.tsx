@@ -33,10 +33,10 @@ export function MessageList() {
         );
 
         messagesQueue.shift();
-
-        clearInterval(timer);
       }
     }, 3000);
+
+    return () => clearInterval(timer);
   }, []);
 
   useEffect(() => {
